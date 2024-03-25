@@ -7,7 +7,7 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl','rb'))
 
 @app.route('/', methods=['GET','POST'])
-def home():
+def predict():
     
     if request.method == 'GET':
         return render_template('index.html')
